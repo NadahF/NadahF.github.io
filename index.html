@@ -2,14 +2,15 @@
 <html>
   <head>
     <title>HangUp</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 100%;
-        width: 80%;
+        width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -21,8 +22,13 @@
   </head>
   <body>
   	<h1>Hang Up</h1>
-    <div id="map"></div>
-    <script>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="groups.html">Groups</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Options </span>
+      <div id="map"></div>
+<script>
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -59,7 +65,14 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-    </script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+</script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCESilNE_2JUWdcZuFSErTb-2yiSMkRIxU&callback=initMap"
   type="text/javascript"></script>
