@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Groups</title>
+    <title>Groups Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
   </head>
   <body>
-  	<h1>Groups Page</h1>
+  	<h1>Groups</h1>
+  	<button class="accordion">Family</button>
+	<div class="panel">
+		<p>Members</p>
+		<ul>
+			<li>Salah Feteih</li>
+			<li>Sohad Khafagy</li>
+			<li>Sarah Feteih</li>
+			<li>Yarah Feteih</li>
+		</ul>
+		<p> Locations </p>
+		<ul> 
+			<li>26217 Mission Rd, Redlands, CA</li>
+		</ul>
+	</div>
+
+	<button class="accordion">Friends</button>
+	<div class="panel">
+	  <p>Members</p>
+	  <ul>
+			<li>Hiba Dahbour </li>
+			<li>Noor Dahbour</li>
+			<li>Yarah</li>
+		</ul>
+		<p>Locations</p>
+		<ul>
+			<li> 9500 Gilman Dr, San Diego, CA</li>
+			<li> 9313 Mira Mesa Blvd, San Diego, CA</li>
+	</div>
+
+	<button class="accordion">Roommates</button>
+	<div class="panel">
+		<p>Members</p>
+		<ul>
+			<li>Hiba Dahbour </li>
+			<li>Noor Dahbour</li>
+			<li>Yarah</li>
+		</ul>	
+		<p>Locations</p>
+		<ul>
+			<li>enter your appartment address here</li>
+		</ul>
+	</div>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+	    	acc[i].addEventListener("click", function() {
+	        /* Toggle between adding and removing the "active" class,
+	        to highlight the button that controls the panel */
+	        this.classList.toggle("active");
+
+	        /* Toggle between hiding and showing the active panel */
+	        var panel = this.nextElementSibling;
+	        if (panel.style.display === "block") {
+	            panel.style.display = "none";
+	        } else {
+	            panel.style.display = "block";
+	        }
+    	});
+		}
+	</script>
   </body>
 </html>
