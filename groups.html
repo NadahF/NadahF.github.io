@@ -5,11 +5,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
-  	<h1>Groups</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Hang Up</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="groups.html">Groups</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
+</nav>
   	<button class="accordion">Family</button>
 	<div class="panel">
+		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+		  <form class="modal-content" action="/action_page.php">
+		    <div class="container">
+		      <h1>Enter New Members Name</h1>
+		      <label for="email"><b>Email</b></label>
+		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <div class="clearfix">
+		        <button type="submit" class="addmember">Add member</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
 		<p>Members</p>
 		<ul>
 			<li>Salah Feteih</li>
@@ -25,6 +53,20 @@
 
 	<button class="accordion">Friends</button>
 	<div class="panel">
+		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+		  <form class="modal-content" action="/action_page.php">
+		    <div class="container">
+		      <h1>Enter New Members Name</h1>
+		      <label for="email"><b>Email</b></label>
+		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <div class="clearfix">
+		        <button type="submit" class="addmember">Add member</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
 	  <p>Members</p>
 	  <ul>
 			<li>Hiba Dahbour </li>
@@ -39,6 +81,20 @@
 
 	<button class="accordion">Roommates</button>
 	<div class="panel">
+		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+		  <form class="modal-content" action="/action_page.php">
+		    <div class="container">
+		      <h1>Enter New Members Name</h1>
+		      <label for="email"><b>Email</b></label>
+		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <div class="clearfix">
+		        <button type="submit" class="addmember">Add member</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
 		<p>Members</p>
 		<ul>
 			<li>Hiba Dahbour </li>
