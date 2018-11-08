@@ -1,10 +1,4 @@
 
-      var group1 = [
-          {'name': 'Sarah Feteih', 'pos': {lat: -34.397, lng: 150.644}},
-          {'name': 'Salah Feteih', 'pos': {lat: -34.397, lng: 150.644}},
-      ];
-      
-
 var acc = document.getElementsByClassName("accordion");
 		var i;
 
@@ -22,14 +16,4 @@ var acc = document.getElementsByClassName("accordion");
 	            panel.style.display = "block";
 	        }
     	});
-		}
-
-		function addGroup1() {
-           for (var i = 0; i < group1.length; i++) {
-              var info = new google.maps.InfoWindow;
-              info.setPosition(group1[i].pos);
-              info.setContent(group1[i].name);
-              infoWindowGroups.open(map);
-           }      
-      }
-
+	}
