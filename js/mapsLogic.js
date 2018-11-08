@@ -2,11 +2,12 @@
 
       var group1 = [
           {'name': 'Sarah Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564},
+          {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
           {'name': 'Sohad Khafagy', 'pos': {lat: 32.820084, lng: -117.165362}},
           {'name': 'Yara Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: 117.165564}},
+          {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
       ];
+      var group1InfoWindows = new Array(); 
 
       var group2 = [
           {'name': 'Lina Bar', 'pos': {lat: 32.867, lng: -117.218}},
@@ -15,6 +16,7 @@
           {'name': 'Ola Abu', 'pos': {lat: 32.864, lng: -117.223}},
           {'name': 'Noor Dahbour', 'pos': {lat:  32.871, lng: -117.211 }}
       ];
+      var group2InfoWindows = new Array(); 
 
       var group3 = [
           {'name': 'Rachel', 'pos': {lat: 32.882, lng: -117.235}},
@@ -26,6 +28,8 @@
           {'name': 'Janice', 'pos': {lat: 32.889, lng: -117.235}},
           {'name': 'Gunther', 'pos': {lat:32.871 , lng: -117.234}},
       ];
+
+      var group3InfoWindows = new Array(); 
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -59,8 +63,16 @@
         
         google.maps.event.addDomListener(document.getElementById('addGroup1'),
                                              'click', function () {
+            group2InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
+            group3InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
+            
             for (var i = 0; i < group1.length; i++) {
               var newInfo = new google.maps.InfoWindow;
+              group1InfoWindows.push(newInfo);
               newInfo.setPosition(group1[i].pos);
               newInfo.setContent(group1[i].name);
               newInfo.open(map);
@@ -69,8 +81,15 @@
 
         google.maps.event.addDomListener(document.getElementById('addGroup2'),
                                              'click', function () {
+            group1InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
+            group3InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
             for (var i = 0; i < group2.length; i++) {
               var newInfo = new google.maps.InfoWindow;
+              group2InfoWindows.push(newInfo);
               newInfo.setPosition(group2[i].pos);
               newInfo.setContent(group2[i].name);
               newInfo.open(map);
@@ -79,8 +98,15 @@
 
         google.maps.event.addDomListener(document.getElementById('addGroup3'),
                                              'click', function () {
+            group1InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
+            group2InfoWindows.forEach(function (elem) {
+                elem.close();
+            });
             for (var i = 0; i < group3.length; i++) {
               var newInfo = new google.maps.InfoWindow;
+              group3InfoWindows.push(newInfo);
               newInfo.setPosition(group3[i].pos);
               newInfo.setContent(group3[i].name);
               newInfo.open(map);
