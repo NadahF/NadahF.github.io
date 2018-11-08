@@ -24,7 +24,6 @@
 </nav>
   	<button class="accordion">Family</button>
 	<div class="panel">
-		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" action="/action_page.php">
@@ -49,6 +48,10 @@
 		<ul> 
 			<li>26217 Mission Rd, Redlands, CA</li>
 		</ul>
+		<div>
+		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
+		<button id="addGroupBtnId">Add to Map</button> 
+		</div>
 	</div>
 
 	<button class="accordion">Friends</button>
@@ -106,25 +109,7 @@
 			<li>enter your appartment address here</li>
 		</ul>
 	</div>
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-	    	acc[i].addEventListener("click", function() {
-	        /* Toggle between adding and removing the "active" class,
-	        to highlight the button that controls the panel */
-	        this.classList.toggle("active");
-
-	        /* Toggle between hiding and showing the active panel */
-	        var panel = this.nextElementSibling;
-	        if (panel.style.display === "block") {
-	            panel.style.display = "none";
-	        } else {
-	            panel.style.display = "block";
-	        }
-    	});
-		}
+	<script src="js/groupsLogic.js">
 	</script>
   </body>
 </html>
