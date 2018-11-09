@@ -122,6 +122,15 @@
         infoWindow.open(map);
       }
 
+function group1Name() {    
+      $("#groupName").html("Family");
+}
+function group2Name() {    
+      $("#groupName").html("Friends");
+}
+function group3Name() {    
+      $("#groupName").html("Roommates");
+}
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
