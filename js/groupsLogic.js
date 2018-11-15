@@ -25,21 +25,48 @@
           {'name': 'Gunther', 'pos': {lat:32.871 , lng: -117.234}},
       ];
 
+$(document).ready(function() {
+    for(i = 0; i < group1.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group1[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group1template").appendChild(node);
+    }
+
+    for(i = 0; i < group2.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group2[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group2template").appendChild(node);
+    }
+
+    for(i = 0; i < group3.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group3[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group3template").appendChild(node);
+    }
+
+
 var acc = document.getElementsByClassName("accordion");
-		var i;
+    var i;
 
-		for (i = 0; i < acc.length; i++) {
-	    	acc[i].addEventListener("click", function() {
-	        /* Toggle between adding and removing the "active" class,
-	        to highlight the button that controls the panel */
-	        this.classList.toggle("active");
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
 
-	        /* Toggle between hiding and showing the active panel */
-	        var panel = this.nextElementSibling;
-	        if (panel.style.display === "block") {
-	            panel.style.display = "none";
-	        } else {
-	            panel.style.display = "block";
-	        }
-    	});
-	}
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
+
+});
+
+
