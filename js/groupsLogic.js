@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-
       var group1 = [
           {'name': 'Sarah Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564},
+          {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
           {'name': 'Sohad Khafagy', 'pos': {lat: 32.820084, lng: -117.165362}},
           {'name': 'Yara Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
           {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
@@ -27,9 +25,6 @@
           {'name': 'Gunther', 'pos': {lat:32.871 , lng: -117.234}},
       ];
 
-
-=======
->>>>>>> 039592be8b482e741806cfa6f8732ee410cf1141
 var acc = document.getElementsByClassName("accordion");
 		var i;
 
