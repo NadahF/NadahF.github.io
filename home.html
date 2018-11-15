@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HangUp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Hang Up</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="groups.html">Groups</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="help.html">Help</a></li>
+      <div class="nav navbar-nav">
+        <button id="groupName" onclick="myFunction()" class="dropbtn">Find People</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a id = "addGroup1" href="#" onclick="group1Name()">Family</a>
+            <a id = "addGroup2" href="#" onclick="group2Name()">Friends</a>
+            <a id = "addGroup3" href="#" onclick="group3Name()">Roommates</a>
+          </div>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="map"></div>
+<script src="js/mapsLogic.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCESilNE_2JUWdcZuFSErTb-2yiSMkRIxU&callback=initMap"
+  type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+</body>
+</html>
