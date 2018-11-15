@@ -4,7 +4,7 @@
           {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564},
           {'name': 'Sohad Khafagy', 'pos': {lat: 32.820084, lng: -117.165362}},
           {'name': 'Yara Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: 117.165564}},
+          {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
       ];
 
       var group2 = [
