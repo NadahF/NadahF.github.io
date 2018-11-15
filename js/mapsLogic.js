@@ -98,6 +98,7 @@
 
         google.maps.event.addDomListener(document.getElementById('addGroup3'),
                                              'click', function () {
+            alert("here");
             group1InfoWindows.forEach(function (elem) {
                 elem.close();
             });
