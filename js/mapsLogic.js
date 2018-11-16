@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    var alerted = sessionStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+      console.log("swal");
+
+     swal('Getting Started', 'Click on "Find People" to see which groups are near you!', 'success')
+     sessionStorage.setItem('alerted','yes');
+    }
+});    
+
       var map, infoWindow;
       var group1InfoWindows = new Array(); 
       var group2InfoWindows = new Array(); 
@@ -87,13 +97,13 @@
         }); 
       }
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
+  infoWindow.open(map);
+}
 
 function group1Name() {    
       $("#groupName").html("Family");

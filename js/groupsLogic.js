@@ -1,6 +1,9 @@
 $(document).ready(function() {
-    console.log(group1.length);
-    console.log(name);
+    var alerted = sessionStorage.getItem('groupsAlert') || '';
+    if (alerted != 'yes') {
+     swal('Updating Groups', 'Click on any group to see members and add individuals!', 'success')
+     sessionStorage.setItem('groupsAlert','yes');
+    }
     updateGroups(); 
     var acc = document.getElementsByClassName("accordion");
     var i;
