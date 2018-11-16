@@ -1,45 +1,79 @@
-      var group1 = [
-          {'name': 'Sarah Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
-          {'name': 'Sohad Khafagy', 'pos': {lat: 32.820084, lng: -117.165362}},
-          {'name': 'Yara Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
-          {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
-      ];
+$(document).ready(function() {
+    console.log(group1.length);
+    console.log(name);
+    updateGroups(); 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-      var group2 = [
-          {'name': 'Lina Bar', 'pos': {lat: 32.867, lng: -117.218}},
-          {'name': 'Hiba Dahbour', 'pos': {lat: 32.867, lng: -117.218}},
-          {'name': 'Maerah Ali', 'pos': {lat: 32.867, lng: -117.218}},
-          {'name': 'Ola Abu', 'pos': {lat: 32.864, lng: -117.223}},
-          {'name': 'Noor Dahbour', 'pos': {lat:  32.871, lng: -117.211 }}
-      ];
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
 
-      var group3 = [
-          {'name': 'Rachel', 'pos': {lat: 32.882, lng: -117.235}},
-          {'name': 'Ross', 'pos': {lat: 32.881, lng: -117.237}},
-          {'name': 'Monica', 'pos': {lat: 32.885, lng: -117.239}},
-          {'name': 'Chandler', 'pos': {lat: 32.890, lng:-117.251 }},
-          {'name': 'Pheobe', 'pos': {lat:32.860 , lng: -117.255}},
-          {'name': 'Joey', 'pos': {lat: 32.869, lng: -117.231}},
-          {'name': 'Janice', 'pos': {lat: 32.889, lng: -117.235}},
-          {'name': 'Gunther', 'pos': {lat:32.871 , lng: -117.234}},
-      ];
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
+});
 
-var acc = document.getElementsByClassName("accordion");
-		var i;
+function addGroup1Member(newName) {
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group1.push(newGroup);
 
-		for (i = 0; i < acc.length; i++) {
-	    	acc[i].addEventListener("click", function() {
-	        /* Toggle between adding and removing the "active" class,
-	        to highlight the button that controls the panel */
-	        this.classList.toggle("active");
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group1template").appendChild(node);
+}
 
-	        /* Toggle between hiding and showing the active panel */
-	        var panel = this.nextElementSibling;
-	        if (panel.style.display === "block") {
-	            panel.style.display = "none";
-	        } else {
-	            panel.style.display = "block";
-	        }
-    	});
-	}
+function addGroup2Member(newName) {
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group2.push(newGroup);
+
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group2template").appendChild(node);}
+
+function addGroup3Member() {
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group1.push(newGroup);
+
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group3template").appendChild(node);}
+
+function updateGroups() {
+    for(i = 0; i < group1.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group1[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group1template").appendChild(node);
+    }
+
+    for(i = 0; i < group2.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group2[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group2template").appendChild(node);
+    }
+
+    for(i = 0; i < group3.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group3[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group3template").appendChild(node);
+    }
+}
+
+function removeForm() {
+  document.getElementById('id01').style.display='none';
+  return false;
+}
