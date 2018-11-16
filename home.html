@@ -4,8 +4,8 @@
     <title>HangUp</a></title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="css/basic.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
   </head>
   <body>
   <nav class="navbar navbar-default">
@@ -27,9 +27,22 @@
       </div>
     </div>
     </ul>
-    <a class="navbar-brand pull-right" href="login.html">Sign out</a>
+    <button class="initialTopMessage" id="topMessage" onclick="setMessage()">Send Message</button>
+    <a class="navbar-brand pull-right" href="index.html">Sign out</a>
   </div>
-</div>
+      <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+      <form class="modal-content" onsubmit="return removeForm();">
+        <div class="container">
+          <h1 id="messageHeader">Send a message</h1>
+          <label for="email"><b>Message</b></label>
+          <input type="text" placeholder="Enter Message Here" required>
+          <div class="clearfix">
+            <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
 </nav>
 <div id="map"></div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -38,6 +51,5 @@
 <script src="js/mapsLogic.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCESilNE_2JUWdcZuFSErTb-2yiSMkRIxU&callback=initMap"
   type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@ $(document).ready(function() {
     }
 });    
 
+
       var map, infoWindow;
       var group1InfoWindows = new Array(); 
       var group2InfoWindows = new Array(); 
@@ -59,6 +60,13 @@ $(document).ready(function() {
               newInfo.setContent(group1[i].name);
               newInfo.open(map);
             } 
+            map.setZoom(17);
+            map.panTo(group1[1].pos);
+
+            setTimeout(function() {
+                  swal('Family', 'Looks like everyone is at home, how about making dinner together?',
+               'success')}, 1000);
+
         }); 
 
         google.maps.event.addDomListener(document.getElementById('addGroup2'),
@@ -76,11 +84,13 @@ $(document).ready(function() {
               newInfo.setContent(group2[i].name);
               newInfo.open(map);
             } 
+
+            map.setZoom(17);
+            map.panTo(group1[1].pos);
         }); 
 
         google.maps.event.addDomListener(document.getElementById('addGroup3'),
                                              'click', function () {
-            alert("here");
             group1InfoWindows.forEach(function (elem) {
                 elem.close();
             });
@@ -93,7 +103,10 @@ $(document).ready(function() {
               newInfo.setPosition(group3[i].pos);
               newInfo.setContent(group3[i].name);
               newInfo.open(map);
-            } 
+            }
+            
+            map.setZoom(17);
+            map.panTo(group1[1].pos); 
         }); 
       }
 
@@ -107,12 +120,18 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function group1Name() {    
       $("#groupName").html("Family");
+      document.getElementById('topMessage').style.visibility = "visible";
+
 }
 function group2Name() {    
       $("#groupName").html("Friends");
+      document.getElementById('topMessage').style.visibility = "visible";
+
 }
 function group3Name() {    
       $("#groupName").html("Roommates");
+      document.getElementById('topMessage').style.visibility = "visible";
+
 }
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -133,4 +152,10 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+function setMessage() {
+  document.getElementById('id01').style.display='block';
+  document.getElementById('messageHeader').innerHTML = 
+  "Send Message to " + document.getElementById('groupName').innerText;
 }
