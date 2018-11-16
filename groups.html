@@ -28,13 +28,13 @@
 		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
-		  <form class="modal-content" action="/action_page.php">
+		  <form class="modal-content">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
 		      <label for="email"><b>Email</b></label>
-		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <input type="text" placeholder="Enter Member name" id="member1name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addmember">Add member</button>
+		        <button type="submit" class="addmember" onclick="addGroup1Member()">Add member</button>
 		      </div>
 		    </div>
 		  </form>
@@ -54,11 +54,11 @@
 		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
-		  <form class="modal-content" action="/action_page.php">
+		  <form class="modal-content" onsubmit="addGroup2Member()">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
 		      <label for="email"><b>Email</b></label>
-		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <input type="text" placeholder="Enter Member name" name="member2Name" required>
 		      <div class="clearfix">
 		        <button type="submit" class="addmember">Add member</button>
 		      </div>
@@ -78,11 +78,11 @@
 		<button onclick="document.getElementById('id01').style.display='block'">Add Member</button>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
-		  <form class="modal-content" action="/action_page.php">
+		  <form class="modal-content" onsubmit="addGroup3Member()">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
 		      <label for="email"><b>Email</b></label>
-		      <input type="text" placeholder="Enter Member name" name="name" required>
+		      <input type="text" placeholder="Enter Member name" name="member3name" required>
 		      <div class="clearfix">
 		        <button type="submit" class="addmember">Add member</button>
 		      </div>
@@ -97,7 +97,7 @@
 		</ul>
 	</div>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="js/groupsLogic.js">
-	</script>
+	<script src="js/fakeGroups.js"></script>
+	<script src="js/groupsLogic.js"></script>
 
 </html>
