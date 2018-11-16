@@ -1,26 +1,7 @@
 $(document).ready(function() {
-    for(i = 0; i < group1.length; i++) {
-      var node = document.createElement("LI");
-      textnode = document.createTextNode(group1[i].name);
-      node.appendChild(textnode);
-      document.getElementById("group1template").appendChild(node);
-    }
-
-    for(i = 0; i < group2.length; i++) {
-      var node = document.createElement("LI");
-      textnode = document.createTextNode(group2[i].name);
-      node.appendChild(textnode);
-      document.getElementById("group2template").appendChild(node);
-    }
-
-    for(i = 0; i < group3.length; i++) {
-      var node = document.createElement("LI");
-      textnode = document.createTextNode(group3[i].name);
-      node.appendChild(textnode);
-      document.getElementById("group3template").appendChild(node);
-    }
-
-
+    console.log(group1.length);
+    console.log(name);
+    updateGroups(); 
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -41,16 +22,58 @@ $(document).ready(function() {
   }
 });
 
-function addGroup1Member() {
-    group1.append(document.getElementById('member1name').value);
+function addGroup1Member(newName) {
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group1.push(newGroup);
+
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group1template").appendChild(node);
 }
 
-function addGroup2Member() {
-    group2.append(document.getElementById('member2name').value);
-}
+function addGroup2Member(newName) {
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group2.push(newGroup);
+
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group2template").appendChild(node);}
 
 function addGroup3Member() {
-    group3.append(document.getElementById('member3name').value);
+  var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
+  group1.push(newGroup);
+
+  var node = document.createElement("LI");
+  textnode = document.createTextNode(newName);
+  node.appendChild(textnode);
+  document.getElementById("group3template").appendChild(node);}
+
+function updateGroups() {
+    for(i = 0; i < group1.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group1[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group1template").appendChild(node);
+    }
+
+    for(i = 0; i < group2.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group2[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group2template").appendChild(node);
+    }
+
+    for(i = 0; i < group3.length; i++) {
+      var node = document.createElement("LI");
+      textnode = document.createTextNode(group3[i].name);
+      node.appendChild(textnode);
+      document.getElementById("group3template").appendChild(node);
+    }
 }
 
-
+function removeForm() {
+  document.getElementById('id01').style.display='none';
+  return false;
+}
