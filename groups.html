@@ -23,9 +23,10 @@
     <button id="groupName" onclick="location.href= 'home.html';" class="dropbtn">Find People</button>
   </div>
 </nav>
+	<p class="promptText"> Click on any group below to see Members and add individuals! </p>
   	<button class="accordion"><center><b>Family</b></center></button>
 	<div class="panel">
-		<center><button onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
+		<center><button class="addMember" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
@@ -39,18 +40,6 @@
 		    </div>
 		  </form>
 		</div>
-
-    <!--
-    <p><center><b>Members</b></center></p>
-		<ul>
-			<li>Salah Feteih</li>
-			<li>Sohad Khafagy</li>
-			<li>Sarah Feteih</li>
-			<li>Yarah Feteih</li>
-      <li>Nadah Feteih</li>
-		</ul>
-		<p><center><b> Location</b></center> </p>
-  -->
 		<p><b>Members</b></p>
 		<ul id="group1template"></ul>
 		<p> <b>Locations </b></p>
@@ -63,7 +52,7 @@
 
 	<button class="accordion"><center><b>Friends</b></center></button>
 	<div class="panel">
-		<center><button onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
+		<center><button class="addMember" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
@@ -72,22 +61,11 @@
 		      <label for="email"><b>Email</b></label>
 		      <input type="text" placeholder="Enter Member name" name="member2Name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addmember" onclick="addGroup2Member(document.getElementById('member1name').value)">Add member</button>
+		        <button type="submit" onclick="addGroup2Member(document.getElementById('member1name').value)">Add member</button>
 		      </div>
 		    </div>
 		  </form>
 		</div>
-    <!--
-    <p><center><b>Members</b></center></p>
-	  <ul>
-			<li>Hiba Dahbour </li>
-			<li>Noor Dahbour</li>
-			<li>Lina Bar</li>
-      <li>Ola Abu</li>
-      <li>Maerah Ali</li>
-		</ul>
-		<p><center><b> Location</b></center> </p>
-  -->
 	  <p><b>Members</b></p>
 		<ul id="group2template"></ul>
 		<p><b>Locations</b></p>
@@ -98,7 +76,7 @@
 
 	<button class="accordion"><center><b>Roommates</b></center></button>
 	<div class="panel">
-		<center><button onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
+		<center><button class="addMember" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
@@ -107,25 +85,11 @@
 		      <label for="email"><b>Email</b></label>
 		      <input type="text" placeholder="Enter Member name" name="member3name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addmember" onclick="addGroup3Member(document.getElementById('member1name').value)">Add member</button>
+		        <button type="submit" class="addMember" onclick="addGroup3Member(document.getElementById('member1name').value)">Add member</button>
 		      </div>
 		    </div>
 		  </form>
 		</div>
-    <!--
-		<p><center><b>Members</b></center></p>
-		<ul>
-			<li>Rachel </li>
-			<li>Ross</li>
-      <li>Monica</li>
-      <li>Joey</li>
-      <li>Pheobe</li>
-      <li>Chandler</li>
-      <li>Janice</li>
-			<li>Gunther</li>
-		</ul>
-		<p><center><b> Location</b></center> </p>
-  -->
 		<p><b>Members</b></p>
 		<ul id="group3template"></ul>
 		<p><b>Locations</b></p>

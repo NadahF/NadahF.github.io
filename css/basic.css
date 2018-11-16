@@ -1,11 +1,11 @@
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
-    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin: 0px;
 }
 
 /* Dropdown button on hover & focus */
@@ -19,15 +19,11 @@
     position: relative;
     display: inline-block;
 }
-/*
-.navbar {
-    width: 100%;
-    text-align: center;
-    > li {
-      float: none;
-      display: inline-block;
-    }
-}*/
+
+ul {
+  list-style: none;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -61,6 +57,10 @@
 
 }
 
+.promptText {
+  text-align: center;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -79,6 +79,16 @@
     transition: 0.4s;
 }
 
+.newgroup {
+    background-color: #3498DB;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
     background-color: #ccc;
@@ -123,12 +133,14 @@ input[type=text]:focus, input[type=password]:focus {
 /* Set a style for all buttons */
 button {
   background-color: #eee;
-  color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
   opacity: 0.9;
+}
+
+.addMember {
+  width: 100%;
 }
 
 button:hover {
@@ -181,6 +193,9 @@ hr {
   margin-bottom: 25px;
 }
 
+.signout {
+  text-align: left;
+}
 /* The Close Button (x) */
 .close {
   position: absolute;
