@@ -32,7 +32,7 @@
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member1name" required>
 		      <div class="clearfix">
 		        <button type="submit" class="addmemberNew" onclick="addGroup1Member(document.getElementById('member1name').value)">Add Family Member</button>
@@ -48,7 +48,7 @@
 				<li>26217 Mission Rd, Redlands, CA</li>
 			</ul>
 		</div>
-		<center><button class="addMemberNew" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Family Member</font></button></center>
+		<center><button class="addMemberNew dropbtn" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Family Member</font></button></center>
 	</div>
 
 	<button onclick="hideOthers()" class="accordion"><center><b>Friends</b></center></button>
@@ -58,7 +58,7 @@
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member2name" required>
 		      <div class="clearfix">
 		        <button type="submit" onclick="addGroup2Member(document.getElementById('member2name').value)">Add Friend</button>
@@ -75,7 +75,7 @@
 			<li> 9313 Mira Mesa Blvd, San Diego, CA</li>
 		</ul>
 	</div>
-	 <center><button class="addMemberNew" onclick="document.getElementById('id02').style.display='block'"><font color="black">Add Friend</font></button></center>
+	 <center><button class="addMemberNew dropbtn" onclick="document.getElementById('id02').style.display='block'"><font color="black">Add Friend</font></button></center>
 	</div>
 
 	<button class="accordion" onClick="hideOthers()">
@@ -86,10 +86,10 @@
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member3name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addMember" onclick="addGroup3Member(document.getElementById('member3name').value)">Add Roommate</button>
+		        <button type="submit" class="dropbtn" onclick="addGroup3Member(document.getElementById('member3name').value)">Add Roommate</button>
 		      </div>
 		    </div>
 		  </form>
@@ -102,7 +102,7 @@
 				<li>955 West Covina Dr.</li>
 			</ul>
 		</div>
-		<center><button class="addMemberNew" onclick="document.getElementById('id03').style.display='block'"><font color="black">Add Roommate</font></button></center>
+		<center><button class="addMemberNew dropbtn" onclick="document.getElementById('id03').style.display='block'"><font color="black">Add Roommate</font></button></center>
 	</div>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
