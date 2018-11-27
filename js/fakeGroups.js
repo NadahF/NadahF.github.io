@@ -1,4 +1,4 @@
-var group1 = [
+var fakeGroup1 = [
           {'name': 'Sarah Feteih', 'pos': {lat: 32.820612, lng: -117.165430}},
           {'name': 'Salah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
           {'name': 'Sohad Khafagy', 'pos': {lat: 32.820084, lng: -117.165362}},
@@ -6,7 +6,7 @@ var group1 = [
           {'name': 'Nadah Feteih', 'pos': {lat: 32.820477, lng: -117.165564}},
       ];
 
-var group2 = [
+var fakeGroup2 = [
           {'name': 'Lina Bar', 'pos': {lat: 32.867, lng: -117.218}},
           {'name': 'Hiba Dahbour', 'pos': {lat: 32.867, lng: -117.218}},
           {'name': 'Maerah Ali', 'pos': {lat: 32.867, lng: -117.218}},
@@ -14,7 +14,7 @@ var group2 = [
           {'name': 'Noor Dahbour', 'pos': {lat:  32.871, lng: -117.211 }}
       ];
 
-var group3 = [
+var fakeGroup3 = [
           {'name': 'Rachel', 'pos': {lat: 32.882, lng: -117.235}},
           {'name': 'Ross', 'pos': {lat: 32.881, lng: -117.237}},
           {'name': 'Monica', 'pos': {lat: 32.885, lng: -117.239}},
