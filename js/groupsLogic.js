@@ -44,7 +44,7 @@ function addGroup2Member(newName) {
   var group2 = JSON.parse(sessionStorage.getItem('group2'));
   group2.push(newGroup);
   sessionStorage.setItem("group2", JSON.stringify(group2));
-
+  console.log("here");
   var node = document.createElement("LI");
   textnode = document.createTextNode(newName);
   node.appendChild(textnode);
@@ -81,6 +81,7 @@ function updateGroups() {
 
     var group2 = sessionStorage.getItem('group2') || '';
     if(group2 == '') {
+      sessionStorage.setItem('group2', JSON.stringify(fakeGroup2));
       group2 = fakeGroup2; 
     } else {
       group2 = JSON.parse(group2);
@@ -95,6 +96,7 @@ function updateGroups() {
 
     var group3 = sessionStorage.getItem('group3') || '';
     if(group3 == '') {
+      sessionStorage.setItem('group3', JSON.stringify(fakeGroup3));
       group3 = fakeGroup3; 
     } else {
       group3 = JSON.parse(group3);
@@ -108,7 +110,17 @@ function updateGroups() {
     }
 }
 
+function hideOthers() {
+  console.log("here");
+  document.getElementById('panel1').style.display='none'
+  document.getElementById('panel2').style.display='none'
+  document.getElementById('panel3').style.display='none'
+}
+
 function removeForm() {
   document.getElementById('id01').style.display='none';
+  document.getElementById('id02').style.display='none';
+  document.getElementById('id03').style.display='none';
+
   return false;
 }

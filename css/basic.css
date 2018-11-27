@@ -76,7 +76,7 @@ ul {
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 30%;
     text-align: left;
     border: none;
     outline: none;
@@ -98,11 +98,41 @@ ul {
     background-color: #ccc;
 }
 
+.innerText {
+  text-align: center;
+}
 /* Style the accordion panel. Note: hidden by default */
+.panel1 {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    width: 30%;
+    float: left;
+    overflow: hidden;
+}
+
 .panel {
     padding: 0 18px;
     background-color: white;
     display: none;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.panel2 {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    width: 30%;
+    float: center;
+    overflow: hidden;
+}
+.panel3 {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    width: 30%;
+    float: right;
     overflow: hidden;
 }
 
@@ -147,8 +177,15 @@ button {
   width: 100%;
 }
 
+.addMemberNew {
+  width: 30%;
+}
 button:hover {
   opacity:1;
+}
+
+#container{
+  text-align: center;
 }
 
 /* Extra styles for the cancel button */
