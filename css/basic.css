@@ -47,6 +47,7 @@ ul {
 }
 
 
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd}
 
@@ -83,6 +84,11 @@ ul {
     transition: 0.4s;
 }
 
+.accOrig {
+  width: 100%;
+
+}
+
 .accordionOrig {
     background-color: #eee;
     color: #444;
@@ -107,6 +113,10 @@ ul {
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.active, .accordionOrig:hover {
     background-color: #ccc;
 }
 
