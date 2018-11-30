@@ -53,11 +53,11 @@ $(document).ready(function() {
                 elem.close();
             });
             
-            for (var i = 0; i < group1.length; i++) {
+            for (var i = 0; i < fakeGroup1.length; i++) {
               var newInfo = new google.maps.InfoWindow;
               group1InfoWindows.push(newInfo);
-              newInfo.setPosition(group1[i].pos);
-              newInfo.setContent(group1[i].name);
+              newInfo.setPosition(fakeGroup1[i].pos);
+              newInfo.setContent(fakeGroup1[i].name);
               newInfo.open(map);
             } 
             map.setZoom(17);
@@ -77,11 +77,11 @@ $(document).ready(function() {
             group3InfoWindows.forEach(function (elem) {
                 elem.close();
             });
-            for (var i = 0; i < group2.length; i++) {
+            for (var i = 0; i < fakeGroup2.length; i++) {
               var newInfo = new google.maps.InfoWindow;
               group2InfoWindows.push(newInfo);
-              newInfo.setPosition(group2[i].pos);
-              newInfo.setContent(group2[i].name);
+              newInfo.setPosition(fakeGroup2[i].pos);
+              newInfo.setContent(fakeGroup2[i].name);
               newInfo.open(map);
             } 
 
@@ -97,11 +97,11 @@ $(document).ready(function() {
             group2InfoWindows.forEach(function (elem) {
                 elem.close();
             });
-            for (var i = 0; i < group3.length; i++) {
+            for (var i = 0; i < fakeGroup3.length; i++) {
               var newInfo = new google.maps.InfoWindow;
               group3InfoWindows.push(newInfo);
-              newInfo.setPosition(group3[i].pos);
-              newInfo.setContent(group3[i].name);
+              newInfo.setPosition(fakeGroup3[i].pos);
+              newInfo.setContent(fakeGroup3[i].name);
               newInfo.open(map);
             }
             
