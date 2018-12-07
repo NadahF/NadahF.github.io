@@ -61,7 +61,7 @@ $(document).ready(function() {
               newInfo.open(map);
             } 
             map.setZoom(17);
-            map.panTo(group1[1].pos);
+            map.panTo(fakeGroup3[1].pos);
 
             setTimeout(function() {
                   swal('Family', 'Looks like everyone is at home, how about making dinner together?',
@@ -86,7 +86,7 @@ $(document).ready(function() {
             } 
 
             map.setZoom(17);
-            map.panTo(group1[1].pos);
+            map.panTo(fakeGroup2[1].pos);
         }); 
 
         google.maps.event.addDomListener(document.getElementById('addGroup3'),
@@ -106,7 +106,7 @@ $(document).ready(function() {
             }
             
             map.setZoom(17);
-            map.panTo(group1[1].pos); 
+            map.panTo(fakeGroup3[1].pos); 
         }); 
       }
 

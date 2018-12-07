@@ -27,6 +27,12 @@ $(document).ready(function() {
   }
 });
 
+function messageSent() {
+  swal('Message Sent', 'Your message has been sent to all members of the group. 
+    Find other people nearby!', 'success');
+
+}
+
 function addGroup1Member(newName) {
   var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
   var group1 = JSON.parse(sessionStorage.getItem('group1'));
