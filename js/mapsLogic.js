@@ -65,7 +65,7 @@ $(document).ready(function() {
 
             setTimeout(function() {
                   swal('Family', 'Looks like everyone is at home, how about making dinner together?',
-               'success')}, 1000);
+               'success')}, 3000);
 
         }); 
 
@@ -128,11 +128,24 @@ function group2Name() {
       document.getElementById('topMessage').style.visibility = "visible";
 
 }
+
 function group3Name() {    
       $("#groupName").html("Roommates");
       document.getElementById('topMessage').style.visibility = "visible";
 
 }
+
+function messageSent() {
+  console.log("here");
+  swal('Message Sent', 'Your message has been sent to all members of the group. Find other people nearby!', 'success');
+}
+
+function removeForm() {
+  document.getElementById('id01').style.display='none';
+
+  return false;
+}
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {

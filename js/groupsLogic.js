@@ -27,12 +27,6 @@ $(document).ready(function() {
   }
 });
 
-function messageSent() {
-  swal('Message Sent', 'Your message has been sent to all members of the group. 
-    Find other people nearby!', 'success');
-
-}
-
 function addGroup1Member(newName) {
   var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
   var group1 = JSON.parse(sessionStorage.getItem('group1'));
@@ -57,12 +51,12 @@ function addGroup2Member(newName) {
   document.getElementById("group2template").appendChild(node);
 }
 
-function addGroup3Member() {
+function addGroup3Member(newName) {
   var newGroup = {'name': newName, 'pos': {lat: 32.867, lng: -120.218}};
   var group3 = JSON.parse(sessionStorage.getItem('group3'));
   group3.push(newGroup);
   sessionStorage.setItem("group3", JSON.stringify(group3));
-  
+  console.log("here");
   var node = document.createElement("LI");
   textnode = document.createTextNode(newName);
   node.appendChild(textnode);

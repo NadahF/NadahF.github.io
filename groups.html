@@ -20,88 +20,92 @@
       <li><a href="profile.html">Profile</a></li>
       <li><a href="help.html">Help</a></li>
     </ul>
-    <button id="groupName" onclick="location.href= 'home.html';" class="dropbtn">Find People</button>
+    <button id="groupName" onclick="location.href= 'home.html';" class="dropbtn">Back to Map</button>
     <a class="navbar-brand pull-right" href="index.html">Sign out</a>
 
   </div>
 </nav>
-	<p class="promptText">  </p>
-  	<button class="accordion accOrig"><center><b>Family</b></center></button>
-	<div class="panel">
-		<center><button class="addMember" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Member</font></button></center>
+  	<button onclick="hideOthers()" class="accordion"><center><b>Family</b></center></button>
+	<div id="panel1" class="panel">
 		<div id="id01" class="modal">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member1name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addmember" onclick="addGroup1Member(document.getElementById('member1name').value)">Add member</button>
+		        <button type="submit" class="addmemberNew" onclick="addGroup1Member(document.getElementById('member1name').value)">Add Family Member</button>
 		      </div>
 		    </div>
 		  </form>
 		</div>
-		<p><b>Members</b></p>
-		<ul id="group1template"></ul>
-		<p> <b>Locations </b></p>
-		<ul>
-			<li>26217 Mission Rd, Redlands, CA</li>
-		</ul>
-		<div>
+		<div class="innerText">
+			<p><b>Members</b></p>
+			<ul id="group1template"></ul>
+			<p> <b>Locations </b></p>
+			<ul>
+				<li>26217 Mission Rd, Redlands, CA</li>
+			</ul>
 		</div>
+		<center><button class="addMemberNew dropbtn" onclick="document.getElementById('id01').style.display='block'"><font color="black">Add Family Member</font></button></center>
 	</div>
 
-	<button class="accordion accOrig"><center><b>Friends</b></center></button>
-	<div class="panel">
-		<center><button class="addMember" onclick="document.getElementById('id02').style.display='block'"><font color="black">Add Member</font></button></center>
+	<button onclick="hideOthers()" class="accordion"><center><b>Friends</b></center></button>
+	<div id="panel2" class="panel">
 		<div id="id02" class="modal">
 		  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member2name" required>
 		      <div class="clearfix">
-		        <button type="submit" onclick="addGroup2Member(document.getElementById('member2name').value)">Add member</button>
+		        <button type="submit" onclick="addGroup2Member(document.getElementById('member2name').value)">Add Friend</button>
 		      </div>
 		    </div>
 		  </form>
 		</div>
+	  <div class="innerText">
 	  <p><b>Members</b></p>
 		<ul id="group2template"></ul>
 		<p><b>Locations</b></p>
 		<ul>
 			<li> 9500 Gilman Dr, San Diego, CA</li>
 			<li> 9313 Mira Mesa Blvd, San Diego, CA</li>
+		</ul>
+	</div>
+	 <center><button class="addMemberNew dropbtn" onclick="document.getElementById('id02').style.display='block'"><font color="black">Add Friend</font></button></center>
 	</div>
 
-	<button class="accordion accOrig"><center><b>Roommates</b></center></button>
-	<div class="panel">
-		<center><button class="addMember" onclick="document.getElementById('id03').style.display='block'"><font color="black">Add Member</font></button></center>
+	<button class="accordion" onClick="hideOthers()">
+		<center><b>Roommates</b></center></button>
+	<div id="panel3" class="panel">
 		<div id="id03" class="modal">
 		  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">X</span>
 		  <form class="modal-content" onsubmit="return removeForm();">
 		    <div class="container">
 		      <h1>Enter New Members Name</h1>
-		      <label for="email"><b>Email</b></label>
+		      <label for="email"><b>Name</b></label>
 		      <input type="text" placeholder="Enter Member name" id="member3name" required>
 		      <div class="clearfix">
-		        <button type="submit" class="addMember" onclick="addGroup3Member(document.getElementById('member3name').value)">Add member</button>
+		        <button type="submit" class="dropbtn" onclick="addGroup3Member(document.getElementById('member3name').value)">Add Roommate</button>
 		      </div>
 		    </div>
 		  </form>
 		</div>
-		<p><b>Members</b></p>
-		<ul id="group3template"></ul>
-		<p><b>Locations</b></p>
-		<ul>
-			<li>955 West Covina Dr.</li>
-		</ul>
+		<div class="innerText">
+			<p><b>Members</b></p>
+			<ul id="group3template"></ul>
+			<p><b>Locations</b></p>
+			<ul>
+				<li>955 West Covina Dr.</li>
+			</ul>
+		</div>
+		<center><button class="addMemberNew dropbtn" onclick="document.getElementById('id03').style.display='block'"><font color="black">Add Roommate</font></button></center>
 	</div>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="js/fakeGroups.js"></script>
 	<script src="js/groupsLogic.js"></script>
-
 </html>
